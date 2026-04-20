@@ -2,6 +2,6 @@
   "name": "cashcompass-root",
   "private": true,
   "scripts": {
-    "start": "cd server && npm install && npm start"
+    "start": "cd server && npm install && node server.js"
   }
 }
