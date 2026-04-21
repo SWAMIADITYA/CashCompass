@@ -28,6 +28,7 @@ exports.registerUser = async (req, res) => {
       userId: result.insertId,
     });
   } catch (error) {
+    console.log(error);
     console.error('Register error:', error);
     res.status(500).json({ message: 'Failed to register user.' });
   }
