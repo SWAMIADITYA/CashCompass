@@ -35,6 +35,7 @@ exports.registerUser = async (req, res) => {
 };
 
 exports.loginUser = async (req, res) => {
+  
   try {
     const { email, password } = req.body;
 
@@ -51,6 +52,7 @@ exports.loginUser = async (req, res) => {
       return res.status(400).json({ message: 'Invalid email or password.' });
     }
 
+    console.log("JWT_SECRET:", process.env.JWT_SECRET);
     const token = jwt.sign(
       {
         id: user.id,
